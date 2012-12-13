@@ -32,6 +32,32 @@
 
 <p>A super-flexible and clean JQuery Dropdown Plugin based on dot.js Templates.</p>
 
+<h1>Markup</h1>
+
+<pre><code>&lt;select data-template="#dropdown"&gt;
+    &lt;option value="1" selected="selected"&gt;Super&lt;/option&gt;
+    &lt;option value="2"&gt;Awesome&lt;/option&gt;
+    &lt;option value="3"&gt;Dropdown&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+<h1>Use dot.js Templates for your Dropdown</h1>
+
+<pre><code>&lt;script id="dropdown-selected" type="text/x-dot-template"&gt;
+{{=data.label}}&lt;div class="arrow"&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;/script&gt;
+&lt;script id="dropdown" type="text/x-dot-template"&gt;
+&lt;div class="dropdown" tabindex="1"&gt;
+    &lt;div class="selected"&gt;{{=data.selected.label}}&lt;/div&gt;
+    &lt;ul&gt;
+        {{~data.items :item:index}}
+        &lt;li data-index="{{=index}}"&gt;{{=item.label}}&lt;/li&gt;
+        {{~}}
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/script&gt;
+</code></pre>
+
 <h1>Usage</h1>
 
 <pre><code>$('select').dropdown();
