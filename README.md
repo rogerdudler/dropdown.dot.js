@@ -10,7 +10,7 @@ A super-flexible and clean JQuery Dropdown Plugin based on dot.js Templates.
         <option value="3">Dropdown</option>
     </select>
 
-# Use dot.js Templates for your Dropdown
+# dot.js Templates
 
     <script id="dropdown-selected" type="text/x-dot-template">
     {{=data.label}}<div class="arrow"><i></i></div>
