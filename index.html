@@ -41,7 +41,7 @@
 &lt;/select&gt;
 </code></pre>
 
-<h1>Use dot.js Templates for your Dropdown</h1>
+<h1>dot.js Templates</h1>
 
 <pre><code>&lt;script id="dropdown-selected" type="text/x-dot-template"&gt;
 {{=data.label}}&lt;div class="arrow"&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
@@ -58,9 +58,25 @@
 &lt;/script&gt;
 </code></pre>
 
-<h1>Usage</h1>
+<h1>Basic Usage</h1>
 
 <pre><code>$('select').dropdown();
+</code></pre>
+
+<h1>Add additional data to your markup</h1>
+
+<p>For example you want to add a <code>count</code> for every item to show in the select menu next to the label.</p>
+
+<pre><code>&lt;select data-template="#dropdown"&gt;
+    &lt;option value="1" data-count="2" selected="selected"&gt;Super&lt;/option&gt;
+    &lt;option value="2" data-count="5"&gt;Awesome&lt;/option&gt;
+    &lt;option value="3" data-count="1"&gt;Dropdown&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+<h1>... and use it in your template with</h1>
+
+<pre><code>{{=item.count}}
 </code></pre>
 
 <h1>Credits</h1>
