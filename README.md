@@ -1,6 +1,6 @@
 # dropdown.dot.js
 
-A super-flexible and clean JQuery Dropdown Plugin based on dot.js Templates.
+A super-flexible and clean JQuery Dropdown Plugin based on [dot.js](https://github.com/olado/doT) Templates.
 
 ## Markup
 
