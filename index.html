@@ -33,13 +33,13 @@
 <p>A super-flexible and clean JQuery Dropdown Plugin based on <a href="https://github.com/olado/doT">dot.js</a> Templates.</p>
 
 <script id="dropdown-selected" type="text/x-dot-template">
-{{=data.label}}<div class="arrow"><i></i></div>
+{{=it.label}}<div class="arrow"><i></i></div>
 </script>
 <script id="dropdown" type="text/x-dot-template">
 <div class="dropdown" tabindex="1">
-    <div class="selected">{{=data.selected.label}}</div>
+    <div class="selected">{{=it.selected.label}}</div>
     <ul>
-        {{~data.items :item:index}}
+        {{~it.items :item:index}}
         <li data-index="{{=index}}">{{=item.label}}</li>
         {{~}}
     </ul>
