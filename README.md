@@ -2,7 +2,7 @@
 
 A super-flexible and clean JQuery Dropdown Plugin based on dot.js Templates.
 
-# Markup
+## Markup
 
     <select data-template="#dropdown">
         <option value="1" selected="selected">Super</option>
@@ -10,7 +10,7 @@ A super-flexible and clean JQuery Dropdown Plugin based on dot.js Templates.
         <option value="3">Dropdown</option>
     </select>
 
-# dot.js Templates
+## dot.js Templates
 
     <script id="dropdown-selected" type="text/x-dot-template">
     {{=data.label}}<div class="arrow"><i></i></div>
@@ -26,11 +26,11 @@ A super-flexible and clean JQuery Dropdown Plugin based on dot.js Templates.
     </div>
     </script>
 
-# Basic Usage
+## Basic Usage
 
     $('select').dropdown();
 
-# Add additional data to your markup #
+## Add additional data to your markup #
 
 For example you want to add a ```count``` for every item to show in the select menu next to the label.
 
@@ -40,11 +40,11 @@ For example you want to add a ```count``` for every item to show in the select m
         <option value="3" data-count="1">Dropdown</option>
     </select>
 
-# ... and use it in your template with
+## ... and use it in your template with
 
     {{=item.count}}
 
-# Credits
+## Credits
 
 Coded by Roger Dudler
 http://twitter.com/rogerdudler
