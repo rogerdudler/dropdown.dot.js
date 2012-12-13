@@ -1,8 +1,8 @@
-# dropdown.dot.js #
+# dropdown.dot.js
 
 A super-flexible and clean JQuery Dropdown Plugin based on dot.js Templates.
 
-# Use default markup as your data source and reference a dot template # #
+# Markup
 
     <select data-template="#dropdown">
         <option value="1" selected="selected">Super</option>
@@ -10,7 +10,7 @@ A super-flexible and clean JQuery Dropdown Plugin based on dot.js Templates.
         <option value="3">Dropdown</option>
     </select>
 
-# Use dot.js Templates for your Dropdown #
+# Use dot.js Templates for your Dropdown
 
     <script id="dropdown-selected" type="text/x-dot-template">
     {{=data.label}}<div class="arrow"><i></i></div>
@@ -26,11 +26,11 @@ A super-flexible and clean JQuery Dropdown Plugin based on dot.js Templates.
     </div>
     </script>
 
-# Usage #
+# Usage
 
     $('select').dropdown();
 
-# Credits #
+# Credits
 
 Coded by Roger Dudler
 http://twitter.com/rogerdudler
