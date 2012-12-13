@@ -26,9 +26,23 @@ A super-flexible and clean JQuery Dropdown Plugin based on dot.js Templates.
     </div>
     </script>
 
-# Usage
+# Basic Usage
 
     $('select').dropdown();
+
+# Add additional data to your markup #
+
+For example you want to add a ```count``` for every item to show in the select menu next to the label.
+
+    <select data-template="#dropdown">
+        <option value="1" data-count="2" selected="selected">Super</option>
+        <option value="2" data-count="5">Awesome</option>
+        <option value="3" data-count="1">Dropdown</option>
+    </select>
+
+# ... and use it in your template with
+
+    {{=item.count}}
 
 # Credits
 
