@@ -151,6 +151,7 @@
                 $items.find('[data-index=' + selectedIndex + ']').removeClass('selected');
                 selectedIndex = index;
                 $(option).addClass('selected');
+                $this.val(item.value);
                 settings.changed(item);
                 _closeDropdown();
             }
