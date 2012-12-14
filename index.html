@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/dropdown.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,7 +19,7 @@
         <h1>dropdown.dot.js</h1>
         <p>A JQuery Plugin for super-flexible Dropdowns based on dot.js Templates</p>
 
-        <p class="view"><a href="https://github.com/rogerdudler/dropdown.dot.js">View the Project on GitHub <small>rogerdudler/dropdown.dot.js</small></a></p>
+        <p class="view"><a href="https://github.com/rogerdudler/dropdown.dot.js">View the Project on GitHub</a></p>
 
 
         <ul>
@@ -28,16 +29,16 @@
         </ul>
       </header>
       <section>
-        <h1>dropdown.dot.js</h1>
+        <h1>Wohhahahaaa!</h1>
 
-<p>A super-flexible and clean JQuery Dropdown Plugin based on <a href="https://github.com/olado/doT">dot.js</a> Templates.</p>
+<p>A super-flexible JQuery Dropdown Plugin based on <a href="https://github.com/olado/doT">dot.js</a> Templates.</p>
 
 <script id="dropdown-selected" type="text/x-dot-template">
-{{=it.label}}<div class="arrow"><i></i></div>
+{{=it.label}}<i>&darr;</i>
 </script>
 <script id="dropdown" type="text/x-dot-template">
 <div class="dropdown" tabindex="1">
-    <div class="selected">{{=it.selected.label}}</div>
+    <div class="selected">{{=it.selected.label}}<i>&darr;</i></div>
     <ul>
         {{~it.items :item:index}}
         <li data-index="{{=index}}">{{=item.label}}</li>
@@ -46,18 +47,52 @@
 </div>
 </script>
 
+<script id="dropdown-data-selected" type="text/x-dot-template">
+{{=it.label}}
+<span class="people">{{=it.people}}<br /><span class="desc">People</span></span>
+<i>&darr;</i>
+</script>
+<script id="dropdown-data" type="text/x-dot-template">
+<div class="dropdown" tabindex="1">
+    <div class="selected">
+      {{=it.selected.label}}
+      <span class="people">{{=it.selected.people}}<br /><span class="desc">People</span></span>
+      <i>&darr;</i>
+    </div>
+    <ul>
+        {{~it.items :item:index}}
+        <li data-index="{{=index}}">{{=item.label}}<span class="people">{{=item.people}}</span></li>
+        {{~}}
+    </ul>
+</div>
+</script>
+
+<h2>Examples</h2>
+<p>
 <select data-template="#dropdown">
-    <option value="1" selected="selected">Super</option>
-    <option value="2">Awesome</option>
-    <option value="3">Dropdown</option>
+    <option value="1" selected="selected">Switzerland</option>
+    <option value="2">Germany</option>
+    <option value="3">United States</option>
+    <option value="4">Sweden</option>
+    <option value="5">France</option>
+    <option value="6">Australia</option>
 </select>
 
+<select data-template="#dropdown-data">
+    <option value="1" selected="selected" data-people="756">Switzerland</option>
+    <option value="2" data-people="200">Germany</option>
+    <option value="3" data-people="3'700">United States</option>
+    <option value="4" data-people="19">Sweden</option>
+    <option value="5" data-people="240">France</option>
+    <option value="6" data-people="2">Australia</option>
+</select>
+</p>
 <h2>Markup</h2>
 
 <pre><code>&lt;select data-template="#dropdown"&gt;
-    &lt;option value="1" selected="selected"&gt;Super&lt;/option&gt;
-    &lt;option value="2"&gt;Awesome&lt;/option&gt;
-    &lt;option value="3"&gt;Dropdown&lt;/option&gt;
+    &lt;option value="1" selected="selected"&gt;Switzerland&lt;/option&gt;
+    &lt;option value="2"&gt;Germany&lt;/option&gt;
+    &lt;option value="3"&gt;United States&lt;/option&gt;
 &lt;/select&gt;
 </code></pre>
 
