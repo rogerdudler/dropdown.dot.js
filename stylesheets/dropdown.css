@@ -86,6 +86,7 @@
 }
 .dropdown ul li {
     display: block;
+    cursor: pointer;
 }
 .dropdown ul li.selected {
     background: #EEE;
