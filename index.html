@@ -124,6 +124,15 @@
 <pre><code>$('select').dropdown();
 </code></pre>
 
+<h3>Callback on selection</h3>
+
+<pre><code>$('select').dropdown({
+    'changed': function(data) {
+        // handle change
+    }
+});
+</code></pre>
+
 <h2>Add additional data to your markup</h2>
 
 <p>For example you want to add a <code>people</code> count for every country like in the advanced example.</p>
