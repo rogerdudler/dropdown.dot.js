@@ -183,6 +183,12 @@ footer {
   bottom:50px;
 }
 
+img.ad {
+  display: block;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {
