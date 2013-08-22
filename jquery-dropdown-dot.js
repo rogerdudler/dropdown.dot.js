@@ -54,6 +54,8 @@
 
             // render dropdown
             var $dropdown = $(template(data));
+            $dropdown.attr({'data-id':$this.attr('id')});
+            $dropdown.addClass($this.attr('class'));
             var $items = $dropdown.find(settings.items);
             var $selected = $dropdown.find('> ' + settings.selected);
 
